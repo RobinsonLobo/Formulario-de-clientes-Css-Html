@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">
+        <form>
+            <fieldset>
+                <legend>Formulario de Clientes</legend>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre completo</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                </div>
+                <p class="fw-bold">Sexo:</p>
+                <div class="form-check">
+                    <input type="radio" id="feminino" name="genero" value="femenino" class="form-check-input" required>
+                    <label for="feminino" class="form-check-label">Femenino</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="masculino" name="genero" value="masculino" class="form-check-input" required>
+                    <label for="masculino" class="form-check-label">Masculino</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="otro" name="genero" value="otro" class="form-check-input" required>
+                    <label for="otro" class="form-check-label">Otro</label>
+                </div>
+                <div class="mb-3">
+                    <label for="data_nacimento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" id="data_nacimento" name="data_nacimento" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pais" class="form-label">País</label>
+                    <input type="text" id="pais" name="pais" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="nit" class="form-label">NIT</label>
+                    <input type="text" id="nit" name="nit" class="form-control" required>
+                </div>
+                <p class="fw-bold">Tipo de cliente:</p>
+                <div class="form-check">
+                    <input type="radio" id="cliente_regular" name="tipo_cliente" value="regular" class="form-check-input" required>
+                    <label for="cliente_regular" class="form-check-label">Cliente Regular</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="cliente_premium" name="tipo_cliente" value="premium" class="form-check-input">
+                    <label for="cliente_premium" class="form-check-label">Cliente Premium</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="cliente_nuevo" name="tipo_cliente" value="nuevo" class="form-check-input">
+                    <label for="cliente_nuevo" class="form-check-label">Cliente Nuevo</label>
+                </div>
+                <button type="submit" id="submit" class="btn btn-primary mt-4">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

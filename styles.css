@@ -1,0 +1,128 @@
+/* Centrar el formulario */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura completa de la pantalla */
+    margin: 0;
+    font-family: Open, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, rgb(222, 144, 225), rgb(136, 199, 224));
+    background-position: center;
+    animation: pulso 2.5s infinite; /* Fondo animado */
+}
+
+/* Animación del fondo */
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilos del contenedor */
+.box {
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    max-width: 600px; /* Máximo ancho */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 3px solid rgb(76, 78, 100);
+    border-radius: 15px;
+    background-color: rgb(205, 223, 238);
+    padding: 20px 10px 30px; /* Ajusta para dar más espacio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Necesario para centrar el legend */
+}
+
+legend {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(56, 181, 203);
+    border-radius: 22px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto; /* Centra automáticamente */
+    display: inline-block; /* Ajusta el tamaño al contenido */
+    margin-left: auto; /* Empuja hacia la derecha */
+    margin-right: 0; /* Asegura que esté pegado a la derecha */
+    transform: translateX(17%) translateY(-15%); /* Ajusta la posición vertical */
+    position: relative; /* Asegura que esté relacionado con el flujo del documento */
+    
+
+}
+
+
+/* Botón con animación */
+#submit {
+    background-color: rgb(64, 139, 209);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 54px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    animation: pulse 2.5s infinite; /* Animación del botón */
+}
+
+#submit:hover {
+    transform: scale(1.1); /* Efecto de hover */
+}
+
+#submit:active {
+    background-color: #4CAF50; /* Un color verde o el que prefieras */
+    color: white; /* Cambia el color del texto si es necesario */
+    transform: scale(1); /* Para que vuelva al tamaño original */
+}
+
+/* Animación del botón */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .box {
+        padding: 10px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    legend {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        padding: 5px;
+    }
+
+    legend {
+        font-size: 1.2rem;
+    }
+
+    #submit {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
